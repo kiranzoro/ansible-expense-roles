@@ -1,11 +1,11 @@
 - name: disable default nodejs
-    ansible.builtin.command: dnf module disable nodejs -y
+  ansible.builtin.command: dnf module disable nodejs -y
 
 - name: enable nodejs:20
   ansible.builtin.command: dnf module enable nodejs:20 -y
 
 - name: install nodejs
-   ansible.builtin.dnf: # only works for Redhat family
+  ansible.builtin.dnf: # only works for Redhat family
     name: "{{ item }}"
     state: installed
   loop:
@@ -13,7 +13,7 @@
   - mysql
 
 - name: create expense user
-   ansible.builtin.user:
+  ansible.builtin.user:
     name: expense
 
 - name: create app directory
