@@ -1,3 +1,5 @@
 login_host: db.phonestand.in
 login_password: ExpenseApp@1
 DB_HOST: db.phonestand.in
+app_locations: /app
+component: backend
