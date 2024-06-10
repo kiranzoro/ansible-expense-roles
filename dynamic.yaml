@@ -1,0 +1,4 @@
+- name: install postfix
+  ansible.builtin.dnf:
+  - name: postfix
+    state: installed
